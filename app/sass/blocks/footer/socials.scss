@@ -1,0 +1,50 @@
+.socials {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social-list {
+  @include reset;
+  display: flex;
+  width: 147px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 25px;
+
+}
+
+.social-item {
+  @include reset;
+  margin: 0 0 0 39px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  a {
+    @include reset;
+    @include link;
+    color: black;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      color: $dark-green;
+    }
+
+    &:active {
+        color: $dark-green;
+        opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .socials {
+    border-bottom: none;
+    padding-top: 6px;
+    margin-right: auto;
+  }
+
+  .social-list {
+    padding-bottom: 0;
+  }
+}

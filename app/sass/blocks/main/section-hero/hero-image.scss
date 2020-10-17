@@ -1,0 +1,114 @@
+.section-hero__index {
+
+  .hero-image {
+    width: 100%;
+    background-color: #fafafa;
+    background-image: url(../img/hero-mobile.jpg);
+    background-position: center -17px;
+    background-repeat: no-repeat;
+    background-size: 575px 373px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url(../img/hero-mobile@2x.jpg);
+    }
+  }
+}
+
+.section-hero__catalog {
+  .hero-image {
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+}
+
+.delivery {
+  display: none;
+}
+
+.main-title {
+  @include reset;
+  @include text($font-size: 27px, $line-height: 30px);
+  text-align: center;
+  padding: 72px 0 121px;
+  margin: 0 auto;
+}
+
+.section-hero__catalog {
+  .main-title {
+    padding-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width) {
+
+  .section-hero__index {
+    .hero-image {
+      background-image: url(../img/hero-desktop.jpg);
+      background-position: center 0;
+      background-size: 1150px 746px;
+      height: 746px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url(../img/hero-desktop@2x.jpg);
+      }
+    }
+
+    .container {
+      padding-top: 17px;
+    }
+  }
+
+  .delivery {
+    @include text(15px, 24px, $main-color);
+    display: block;
+    text-align: right;
+
+  }
+
+  .main-title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 112px 0 374px;
+  }
+
+  .section-hero__catalog {
+
+    .hero-image {
+      padding-top: 17px;
+    }
+
+    .main-title {
+      padding-top: 54px;
+      padding-bottom: 78px;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: $desktop-width) {
+    .hero-image {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+
+  .main-title {
+    width: 100%;
+    font-size: 53px;
+    line-height: 57px;
+    padding: 113px 0 359px;
+  }
+
+  .section-hero__catalog {
+
+    .main-title {
+      padding-top: 54px;
+      padding-bottom: 96px;
+    }
+  }
+}

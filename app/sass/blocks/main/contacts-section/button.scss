@@ -1,0 +1,20 @@
+.section-contacts {
+
+  .button-ghost {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .button-ghost {
+    width: 34%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $desktop-width){
+  .button-ghost {
+    width: 65.5%;
+    margin: 0 auto;
+  }
+}

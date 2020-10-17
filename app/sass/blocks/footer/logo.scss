@@ -1,0 +1,55 @@
+.footer-logo {
+  display: none;
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .footer-logo {
+    display: block;
+    margin-right: 23.5%;
+
+    a {
+      @include reset;
+      @include link;
+      color: black;
+      transition: 0.3s ease-in;
+
+      svg {
+        transition: 0.3s ease-in;
+        width: 125px;
+      }
+
+      &:hover {
+        color: $dark-green;
+      }
+
+      &:active {
+        color: $dark-green;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .footer-logo {
+
+    a {
+
+      svg {
+        width: 105px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .footer-logo {
+    display: block;
+    margin-right: 33.5%;
+
+    a {
+
+      svg {
+        width: 102px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.header {
+  overflow-y: hidden;
+  background-color: #fff;
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: $tablet-min-width){
+  .header {
+    overflow-y: visible;
+    height: 89px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width){
+  .header {
+
+    .wrapper {
+      overflow: hidden;
+    }
+  }
+
+}

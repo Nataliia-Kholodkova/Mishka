@@ -1,0 +1,162 @@
+.section-video {
+
+  margin-bottom: 59px;
+
+  .container {
+    position: relative;
+    background-image: url(../img/video.svg);
+    background-repeat: no-repeat;
+    background-size: 32px 22px;
+    background-position: 63px 35px;
+  }
+
+  .picture-wrapper {
+    position: relative;
+  }
+
+  .wrapper {
+    padding-top: 95px;
+    padding-bottom: 5px;
+    border: 1px solid #ececec;
+  }
+
+  picture {
+    width: 100%;
+  }
+
+  .video-photo {
+    width: 100%;
+  }
+
+  .title {
+    @include text(17px, 24px);
+    position: absolute;
+    top: 24px;
+    right: 23%;
+  }
+}
+
+.play-ico {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    width: 121px;
+    height: 92.4px;
+  }
+
+  &:active {
+    width: 80.8px;
+    height: 61.6px;
+    opacity: 0.3;
+  }
+}
+
+.description-video {
+  padding: 27px 34px;
+
+  .text {
+    @include text(13px, 24px, $main-color);
+    margin-bottom: 25px;
+  }
+
+  .button-ghost {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .section-video {
+
+
+    margin-bottom: 64px;
+
+    .container {
+      background-image: none;
+    }
+
+    .picture-wrapper {
+      position: relative;
+    }
+
+    .wrapper {
+      padding-top: 0;
+      padding-bottom: 5px;
+    }
+
+    .title {
+      font-size: 20px;
+      position: static;
+      padding-left: 64px;
+      margin-bottom: 33px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .description-video {
+    padding: 39px 43px;
+    background-image: url(../img/video.svg);
+    background-repeat: no-repeat;
+    background-size: 32px 22px;
+    background-position: 43px 39px;
+
+    .text {
+      font-size: 15px;
+      line-height: 30px;
+      margin-bottom: 35px;
+
+    }
+
+    .button-ghost {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (min-width: $desktop-width){
+  .section-video {
+    padding-top: 53px;
+    margin-bottom: 103px;
+
+    .picture-wrapper {
+      box-sizing: border-box;
+
+      .video-photo {
+        box-sizing: border-box;
+        width: 682px;
+        height: 455px;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 0;
+    }
+
+    .title {
+      padding-left: 0;
+    }
+  }
+
+  .description-video {
+    padding: 96px 57px 0 62px;
+    width: 350px;
+    background-position: 64px 46px;
+    box-sizing: border-box;
+    margin-left: auto;
+
+    .text {
+      margin-bottom: 47px;
+    }
+  }
+}

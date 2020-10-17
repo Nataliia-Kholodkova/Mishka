@@ -1,0 +1,63 @@
+.section-week-item {
+
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 27px;
+    padding-bottom: 145px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 100%;
+    background-image: url(../img/zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 300px 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .section-week-item {
+
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 49px;
+      padding-bottom: 69px;
+    }
+
+    &::after {
+      height: 17px;
+      background-position: 0 0;
+      background-size: contain;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .section-week-item {
+
+    .container {
+      padding-top: 68px;
+      padding-bottom: 95px;
+      position: relative;
+    }
+
+    &::after {
+      height: 23px;
+      background-size: contain;
+      width: 84%;
+    }
+  }
+}

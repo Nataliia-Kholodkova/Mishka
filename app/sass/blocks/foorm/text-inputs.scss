@@ -1,0 +1,302 @@
+.fieldset-name, .fieldset-contacts, .fieldset-more {
+
+  .label {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .input {
+    @include text-input;
+    @include text(17px, 18px, $main-color);
+    width: 100%;
+    padding: 6px 35px 16px 0;
+
+    &::placeholder {
+      font: inherit;
+      @include text(17px, 18px, $main-color)
+    }
+
+    &:hover, &:active {
+      border-color: $light-green;
+
+      & + .contacts-ico {
+        fill: $light-green;
+      }
+    }
+  }
+}
+
+.name-list, .contacts-list {
+  @include reset;
+}
+
+.label-name {
+
+  .subtitle {
+    margin-bottom: 10px;
+  }
+}
+
+.fieldset-name {
+  margin-bottom: 30px;
+
+  .title {
+    margin-bottom: 29px;
+  }
+}
+
+.name-item {
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label-contacts {
+
+  position: relative;
+
+  .subtitle {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts-ico {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.tel-ico {
+  top: 34px;
+  right: 9px;
+}
+
+.mail-ico {
+  top: 40px;
+  right: 4px;
+}
+
+.fieldset-contacts {
+  margin-bottom: 32px;
+
+  .title {
+    margin-bottom: 17px;
+    width: 100%;
+  }
+}
+
+.contacts-item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fieldset-more {
+  margin-bottom: 16px;
+
+  .title {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  textarea {
+    @include input;
+    @include text(17px, 18px, $main-color);
+    resize: none;
+    height: 142px;
+    width: 100%;
+    padding: 14px;
+
+    &::placeholder {
+      font: inherit;
+      @include text(17px, 18px, $main-color)
+    }
+
+    &:hover, &:active {
+      border-color: $light-green;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .fieldset-name, .fieldset-contacts, .fieldset-more {
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .label {
+      flex-wrap: nowrap;
+      align-items: baseline;
+    }
+
+    .input {
+      font-size: 19px;
+      line-height: 19px;
+      padding: 0 35px 14px 16px;
+
+      &::placeholder {
+        font-size: 19px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .name-list {
+    width: 75%;
+  }
+
+  .label-name {
+
+    .subtitle {
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+  }
+
+  .fieldset-name {
+    margin-bottom: 50px;
+
+    .title {
+      padding-top: 6px;
+      margin-bottom: 0;
+    }
+  }
+
+  .name-item {
+    margin-bottom: 35px;
+  }
+
+  .contacts-list {
+    width: 100%;
+  }
+
+  .label-contacts {
+
+    .subtitle {
+      margin-bottom: 0;
+    }
+  }
+
+  .tel-ico {
+    top: 0;
+    right: 27px;
+  }
+
+  .mail-ico {
+    top: 6px;
+    right: 22px;
+  }
+
+  .fieldset-contacts {
+    padding-top: 59px;
+    padding-bottom: 49px;
+    margin-bottom: 51px;
+    background-color: #f1f1f1;
+
+    .title {
+      margin-bottom: 0;
+      margin-right: 46px;
+      width: 165px;
+    }
+  }
+
+  .contacts-item {
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .fieldset-more {
+    margin-bottom: 53px;
+
+    .title {
+      width: 165px;
+      margin-right: 45px;
+      margin-bottom: 0;
+    }
+
+    .label {
+      width: 100%;
+    }
+
+    textarea {
+      font-size: 19px;
+      line-height: 19px;
+      width: 100%;
+
+      &::placeholder {
+        font-size: 19px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width){
+
+  .fieldset-name, .fieldset-contacts, .fieldset-more {
+
+    .container {
+      justify-content: flex-start;
+    }
+  }
+
+  .name-list {
+    width: 66.5%;
+  }
+
+  .fieldset-name {
+    margin-bottom: 49px;
+
+    .title {
+      margin-right: 9px;
+    }
+  }
+
+  .tel-ico {
+    top: 0;
+    right: 8px;
+  }
+
+  .mail-ico {
+    top: 6px;
+    right: 4px;
+  }
+
+  .fieldset-contacts {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    .title {
+      margin-bottom: 0;
+      margin-right: 16px;
+      width: 202px;
+      display: block;
+    }
+  }
+
+  .contacts-list {
+    width: 83.3%;
+  }
+
+  .fieldset-more {
+    margin-bottom: 49px;
+
+    .title {
+      width: 202px;
+      margin-right: 17px;
+    }
+
+    .label {
+      width: 83.3%;
+    }
+  }
+}

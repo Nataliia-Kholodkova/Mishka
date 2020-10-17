@@ -1,0 +1,150 @@
+.section-form {
+
+  padding-top: 23px;
+  padding-bottom: 54px;
+
+  .text {
+    @include text(13px, 24px, $main-color);
+  }
+}
+
+.buy-form {
+
+  margin-top: 22px;
+
+  .fieldset {
+    border: none;
+  }
+
+  .title {
+    @include text(17px, 17px, $light-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 77%;
+      height: 2px;
+      background-color: $light-green;
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+  }
+
+  .subtitle {
+    @include text(17px, 18px);
+    font-weight: 700;
+  }
+}
+
+.form-footer {
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .text {
+    @include text(14px, 16px, $main-color);
+    order: -1;
+    margin-bottom: 32px;
+  }
+
+  .button-ghost {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .section-form {
+
+    padding-top: 75px;
+    padding-bottom: 50px;
+
+    .container {
+      padding: 0 50px;
+    }
+
+    .text {
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+
+  .buy-form {
+
+    margin-top: 58px;
+
+    .title {
+      width: 167px;
+      margin-right: auto;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .subtitle {
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
+
+  .form-footer {
+
+    .container {
+      align-items: center;
+    }
+
+    .text {
+      font-size: 17px;
+      line-height: 30px;
+      order: 1;
+      margin-bottom: 0;
+    }
+
+    .button-ghost {
+      width: 34.5%;
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .section-form {
+    padding-top: 128px;
+
+    .container {
+      padding: 0 100px;
+    }
+
+    & > .container {
+      padding: 0 275px;
+    }
+  }
+
+  .buy-form {
+
+    margin-top: 56px;
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  .form-footer {
+
+    .container {
+      padding: 0 275px;
+    }
+
+    .button-ghost {
+      width: 33%;
+    }
+  }
+}

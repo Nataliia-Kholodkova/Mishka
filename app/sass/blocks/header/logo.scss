@@ -1,0 +1,149 @@
+.logo {
+  padding: 21px 0;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+
+  a {
+    @include reset;
+    @include link;
+    width: 86px;
+    margin: 0 auto;
+    transition: 0.3s ease-in;
+
+    img {
+      width: 86px;
+      height: 35px;
+      margin: 0 auto;
+      transition: 0.3s ease-in;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      img {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.button-menu {
+  @include reset;
+  @include button;
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  top: 29px;
+  right: 31px;
+  transition: 0.3s ease-in;
+  z-index: 3;
+
+  svg {
+    opacity: 0;
+    transition: 0.3s ease-in;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.button-menu__open {
+  .menu-close {
+    opacity: 0;
+  }
+
+  .menu-open {
+    opacity: 1;
+  }
+
+  &:hover {
+    .menu-open {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    .menu-open {
+      opacity: 0.3;
+    }
+  }
+}
+
+.button-menu__close {
+  .menu-open {
+    opacity: 0;
+  }
+
+  .menu-close {
+    opacity: 1;
+    top: 7px;
+  }
+
+  &:hover {
+    .menu-close {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    .menu-close {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .logo {
+    padding: 21px 0;
+    border: none;
+    width: 113px;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 48px;
+
+    a {
+      width: 113px;
+      margin: 0;
+
+      img {
+        width: 113px;
+        height: 46px;
+      }
+    }
+  }
+
+  .button-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .logo {
+    padding: 9px 0 7px;
+    width: 149px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    a {
+      width: 149px;
+
+      img {
+        width: 149px;
+        height: 72px;
+      }
+    }
+  }
+}

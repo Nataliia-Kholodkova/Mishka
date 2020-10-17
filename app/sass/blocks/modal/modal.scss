@@ -1,0 +1,124 @@
+.modal-form {
+  top: 44px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.add-item-form {
+  box-sizing: border-box;
+  padding-top: 31px;
+  padding-bottom: 46px;
+
+  .title {
+    @include text(25px, 30px);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .text {
+    @include text(15px, 30px, $main-color);
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  .button-green {
+    width: 100%;
+  }
+}
+
+.sizes-list, .sizes-item {
+  @include reset;
+}
+
+.size-ico {
+  display: block;
+  box-sizing: border-box;
+  @include text(17px, 17px, $main-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  width: 82px;
+  height: 52px;
+  padding: 16px 0;
+  border: 2px solid rgba(#444444, 0.1);
+  transition: 0.3s ease-in;
+}
+
+.sizes-list {
+  display: flex;
+  margin-bottom: 31px;
+}
+
+.sizes-item {
+  margin-right: auto;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  input {
+
+    &:hover {
+      & + .size-ico {
+        border-color: rgba(#444444, 0.3);
+      }
+    }
+
+    &:active {
+      & + .size-ico {
+        border-color: #62d1ba;
+      }
+    }
+
+    &:checked {
+
+      & + .size-ico {
+        border-color: #62d1ba;
+      }
+      &:hover {
+        & + .size-ico {
+          border-color: $dark-green;
+        }
+      }
+
+      &:active {
+        & + .size-ico {
+          border-color: rgba($dark-green, 0.3);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .modal-form {
+    width: 568px;
+    padding: 0 106px;
+  }
+
+  .add-item-form {
+    padding-top: 37px;
+
+    .title {
+      font-size: 30px;
+      line-height: 50px;
+      margin-bottom: 17px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .text {
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .size-ico {
+    width: 112px;
+  }
+}

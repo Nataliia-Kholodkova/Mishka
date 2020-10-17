@@ -1,0 +1,96 @@
+.week-mark {
+  @include reset;
+  @include text($font-size: 17px, $line-height: 20px, $color: $light-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  br {
+    display: none;
+  }
+}
+
+.week-text-bold {
+  @include reset;
+  @include text($font-size: 17px, $line-height: 24px, $color: $main-color);
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.section-week-item {
+  .button-ghost {
+    width: 100%;
+  }
+
+  picture {
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.price-button {
+  position: absolute;
+  width: 81%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 42px;
+}
+
+
+@media screen and (min-width: $tablet-min-width) {
+  .week-mark {
+    text-align: center;
+    display: block;
+    padding: 7px 28px;
+
+    br {
+      display: block;
+    }
+  }
+
+  .price-button {
+    position: static;
+    width: 100%;
+  }
+
+  .week-text-bold {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .section-week-item {
+
+    picture {
+      margin-bottom: 0;
+      padding-top: 7px;
+      padding-right: 3px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .week-mark {
+    order: -1;
+    padding: 0;
+    position: absolute;
+    top: 133px;
+    left: 146px;
+  }
+
+  .price-button {
+    width: 97%;
+    margin-right: 7px;
+  }
+
+  .section-week-item {
+
+    picture {
+      padding-top: 0;
+      padding-right: 0;
+    }
+  }
+}

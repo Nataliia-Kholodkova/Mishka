@@ -1,0 +1,53 @@
+.description-table {
+  @include reset;
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr, th, td {
+    @include reset;
+  }
+
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+
+  td, th {
+    @include text($font-size: 15px, $line-height: 24px, $color: $main-color);
+    text-align: left;
+    padding: 9px 0 7px;
+  }
+
+  th {
+    width: 38%;
+  }
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .description-table {
+
+    margin-bottom: 56px;
+
+    td, th {
+      line-height: 20px;
+      padding: 9px 0 11px;
+    }
+
+    th {
+      width: 33%;
+      font-weight: 400;
+      padding-left: 2px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .description-table {
+
+    margin-bottom: 109px;
+
+    th {
+      padding-left: 1px;
+    }
+  }
+}

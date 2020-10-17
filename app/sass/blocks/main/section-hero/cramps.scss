@@ -1,0 +1,26 @@
+.cramps-list {
+  @include reset;
+  display: none;
+}
+
+@media screen and (min-width: $desktop-width){
+  .cramps-list {
+    display: flex;
+    margin-right: auto;
+  }
+
+  .cramp-item {
+    @include reset;
+    margin-right: 61px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include reset;
+      @include link;
+      @include text(15px, 24px)
+    }
+  }
+}

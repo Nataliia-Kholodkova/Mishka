@@ -1,0 +1,157 @@
+.section-about-us {
+
+  padding-top: 28px;
+
+  .title {
+    @include text(25px, 30px);
+    margin-bottom: 31px;
+  }
+}
+
+.about-list {
+  @include reset;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-item {
+  @include reset;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+
+  p {
+    @include reset;
+    @include text(17px, 20px);
+    font-weight: 700;
+  }
+}
+
+.about-item__flower {
+  background-image: url(../img/flower.svg);
+  background-size: 32px 37px;
+  background-position: 8px 0;
+  padding-top: 55px;
+}
+
+.about-item__style {
+  background-image: url(../img/style.svg);
+  background-size: 47px 27px;
+  background-position: 0 0;
+  padding-top: 53px;
+}
+
+.about-item__heart {
+  background-image: url(../img/heart.svg);
+  background-size: 34px 27px;
+  background-position: 7px 5px;
+  padding-top: 53px;
+}
+
+.about-item__ball {
+  background-image: url(../img/ball.svg);
+  background-size: 35px 34px;
+  background-position: 3px 2px;
+  padding-top: 52px;
+}
+
+.about-item__racket {
+  background-image: url(../img/racket.svg);
+  background-size: 55px 23px;
+  background-position: 0 4px;
+  padding-top: 53px;
+}
+
+.about-item__gift {
+  background-image: url(../img/gift.svg);
+  background-size: 33px 32px;
+  background-position: 3px 2px;
+  padding-top: 54px;
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .section-about-us {
+
+    padding-top: 50px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 50px;
+    }
+
+    .title {
+      font-size: 43px;
+      line-height: 50px;
+      width: 100%;
+      margin-bottom: 47px;
+    }
+  }
+
+  .about-list {
+    width: 48%;
+  }
+
+  .about-item {
+    margin-bottom: 59px;
+
+    p {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  .about-list:last-child {
+    p {
+      padding-left: 13px;
+    }
+  }
+
+  .about-item__ball {
+    background-position: 16px 4px;
+    padding-top: 54px;
+  }
+
+  .about-item__racket {
+    background-position: 7px 4px;
+  }
+
+  .about-item__gift {
+    background-position: 16px 2px;
+  }
+}
+
+@media screen and (min-width: $desktop-width){
+  .section-about-us {
+
+    padding-top: 58px;
+
+    .container {
+      padding: 3px 271px;
+    }
+
+    .title {
+      font-size: 53px;
+      line-height: 57px;
+      margin-bottom: 47px;
+    }
+  }
+
+  .about-list:first-of-type {
+    p {
+      padding-left: 4px;
+    }
+  }
+
+  .about-item__flower {
+    background-position: 13px 1px;
+  }
+
+  .about-item__style {
+    background-position: 5px 0;
+  }
+
+  .about-item__heart {
+    background-position: 12px 5px;
+  }
+}

@@ -1,0 +1,43 @@
+.academy-logo {
+  padding: 23px 37px;
+
+  a {
+    @include reset;
+    @include link;
+    @include text(19px, 18px);
+    font-weight: 700;
+    transition: 0.3s ease-in;
+
+    svg {
+      margin-left: 25px;
+      fill: $light-green;
+      transition: 0.3s ease-in;
+    }
+
+    &:hover {
+      svg {
+        fill: $dark-green;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+      svg {
+        fill: $dark-green;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-min-width){
+  .academy-logo {
+    padding: 0;
+    padding-top: 7px;
+
+    a {
+      svg {
+        margin-left: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.description {
+  padding-top: 24px;
+  margin-bottom: 28px;
+}
+
+.week-title {
+  @include text($font-size: 25px, $line-height: 30px);
+  order: -1;
+  margin-bottom: 5px;
+}
+
+.week-text {
+  @include text($font-size: 15px, $line-height: 24px, $color: $main-color);
+  margin-bottom: 17px;
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  .description {
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-right: 44px;
+    box-sizing: border-box;
+    width: 50%;
+    margin-right: auto;
+  }
+
+  .week-title {
+    font-size: 43px;
+    line-height: 50px;
+    order: -1;
+    margin-bottom: 49px;
+    margin-right: auto;
+  }
+
+  .week-text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+  .description {
+    padding-top: 158px;
+    padding-left: 174px;
+    padding-right: 52px;
+  }
+
+  .week-title {
+    font-size: 53px;
+    line-height: 57px;
+    position: absolute;
+    text-align: center;
+    top: 121px;
+    right: 0;
+    left: -181px;
+    margin: auto;
+    width: 43%;
+  }
+
+  .week-text {
+    margin-bottom: 50px;
+  }
+}
